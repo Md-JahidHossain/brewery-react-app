@@ -25,8 +25,7 @@ function SearchForm() {
             ref={searchValue}
             onChange={searchBrewery}
           />
-          <button className = "button-search">Search Brewery</button>
-      </form>
+          <input className = "button-search" type = "submit" value = Search Brewery by City />
 
   )
 }
