@@ -7,7 +7,7 @@ function CardList() {
 
   if (breweries.length < 1) {
     return (
-      <h2>
+      <h2 className = "section-title">
         No Brewery matched to your search criteria
       </h2>
     )
