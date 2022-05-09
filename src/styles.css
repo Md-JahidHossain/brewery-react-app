@@ -37,6 +37,14 @@ body {
 
 }
 
+.section-title {
+
+  margin-top: 5rem;
+  text-align: center;
+
+}
+
+
 .card-text-detail {
   text-align: left;
   margin: 4rem 10rem;
