@@ -1,0 +1,86 @@
+body {
+
+  background: #746967;
+
+}
+
+.background {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5rem;
+  max-width: 100%;
+}
+
+.card {
+  width: 28rem;
+  height: 23rem;
+  margin: 2rem;
+  background-color: #fff;
+}
+
+.card-detail {
+  width: 40rem;
+  height: 45rem;
+  margin: 5rem auto;
+  background-color: #fff;
+}
+
+.card-text {
+  text-align: left;
+  margin: 5rem 2rem 0 5rem;
+  line-height: .82rem;
+}
+
+.brewery-detail-heading {
+  padding-top: 3rem;
+  text-align: center;
+
+}
+
+.card-text-detail {
+  text-align: left;
+  margin: 4rem 10rem;
+  line-height: .5rem;
+}
+
+.input-form {
+  height: 1rem;
+  width: 84rem;
+  padding-top:1rem;
+  padding-bottom: 1rem;
+  margin-top:3rem;
+  margin-left: 7rem;
+}
+
+.button-search {
+  height: 3.4rem;
+  width: 8rem;
+  padding-top:1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: #F1DE86;
+}
+
+
+.button-details {
+  text-decoration: none;
+  height: 1.5rem;
+  width: 28rem;
+  padding-top:1rem;
+  padding-bottom:1rem;
+  margin-top:10rem;
+  text-align: center;
+  background-color: #F1DE86;
+}
+
+.button-home {
+  height: 1.5rem;
+  width: 16rem;
+  padding-top:1rem;
+  padding-bottom:1rem;
+  margin-top:6rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: #F1DE86;
+}
