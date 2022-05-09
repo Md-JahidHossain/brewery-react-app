@@ -66,7 +66,7 @@ function SingleBreweryDetails() {
   }, [id])
 
   if (!brewery) {
-    return <h2 className ='section-title'> No Brewery to display </h2>
+    return <h2 className ='section-title'> L o a d i n g . . . . .  </h2>
   } else {
     const {
       name,
