@@ -5,11 +5,11 @@ import { useParams, Link } from 'react-router-dom'
 function SingleBreweryDetails() {
 
   const { id } = useParams()
-  const [cocktail, setCocktail] = React.useState(null)
+  const [brewery, setBrewery] = React.useState(null)
 
   React.useEffect(() => {
 
-    async function getCocktail() {
+    async function getBrewery() {
       try {
         const response = await fetch(
           `https://api.openbrewerydb.org/breweries?by_id=${id}`
@@ -35,7 +35,7 @@ function SingleBreweryDetails() {
             created_at
           } = data[3]
 
-          const newCocktail = {
+          const newBrewery = {
             name,
             brewery_type,
             street,
@@ -53,20 +53,20 @@ function SingleBreweryDetails() {
             updated_at,
             created_at
           }
-          setCocktail(newCocktail)
+          setBrewery(newBrewery)
         } else {
-          setCocktail(null)
+          setBrewery(null)
         }
       } catch (error) {
-        console.log(error)
+
       }
 
     }
-    getCocktail()
+    getBrewery()
   }, [id])
 
-  if (!cocktail) {
-    return <h2 className='section-title'>No Brewery to display</h2>
+  if (!brewery) {
+    return <h2 className ='section-title'> No Brewery to display </h2>
   } else {
     const {
       name,
@@ -85,7 +85,7 @@ function SingleBreweryDetails() {
       website_url,
       updated_at,
       created_at,
-    } = cocktail
+    } = brewery
     return (
       <div className='card-detail'>
 
