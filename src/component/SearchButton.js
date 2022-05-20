@@ -16,19 +16,21 @@ function SearchForm() {
     e.preventDefault()
   }
   return (
-
-      <form  onSubmit={handleSubmit}>
-          <input className = "input-form"
+    <section className = "section">
+      <form className = "search-form" onSubmit={handleSubmit} method = "post">
+        <div className = "form-control">
+          <input
             type='text'
             name='name'
             id='name'
             ref={searchValue}
             onChange={searchBrewery}
-            placeholder = " Search by City"
+            placeholder = "Search Brewery by City"
           />
-          <input className = "button-search" type = "submit" value = "Search Brewery" />
+        </div>
       </form>
-  
-   )
+    </section>
+
+  )
 }
 export default SearchForm;
