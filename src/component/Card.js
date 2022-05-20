@@ -13,7 +13,7 @@ function Card({  id, name, brewery_type, city }) {
         </div>
 
         <div className='button-details'>
-          <Link to={`/brewery/${id}`} className='button-details'>
+          <Link to={`/brewery/${name}`} className='button-details'>
             View Details
           </Link>
         </div>
