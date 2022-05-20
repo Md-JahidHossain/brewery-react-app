@@ -1,20 +1,45 @@
-body {
-
-  background: #746967;
-
+:root {
+  --smallWidth: 77vw;
+  --maxWidth: 50rem;
 }
 
+body {
+  background: #746967;
+  margin-left: 5rem;
+}
+
+.section {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.search-form {
+  width: var(--smallWidth);
+  margin: auto;
+  max-width: var(--maxWidth);
+  background: #fff;
+}
+
+.form-control input {
+  width: var(--smallWidth);
+  max-width: var(--maxWidth);
+  background: #fff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.no-brewery-title {
+  text-align: center;
+}
 .background {
   display: flex;
   flex-wrap: wrap;
-  margin: 2rem;
   max-width: 100%;
 }
 
 .card {
   width: 28rem;
-  height: 23rem;
-  margin: 2rem;
+  height: 23.5rem;
+  margin: 1.5rem;
   background-color: #fff;
 }
 
@@ -28,19 +53,12 @@ body {
 .card-text {
   text-align: left;
   margin: 5rem 2rem 0 5rem;
-  line-height: .82rem;
+  line-height: 1rem;
 }
 
 .brewery-detail-heading {
   padding-top: 3rem;
   text-align: center;
-
-}
-.section-title {
-
-  margin-top: 5rem;
-  text-align: center;
-
 }
 
 .card-text-detail {
@@ -48,26 +66,6 @@ body {
   margin: 4rem 10rem;
   line-height: .5rem;
 }
-
-.input-form {
-  height: 1rem;
-  width:84rem;
-  padding-top:1rem;
-  padding-bottom: 1rem;
-  margin-top:3rem;
-  margin-left: 4rem;
-}
-
-.button-search {
-  height: 3.4rem;
-  width: 8rem;
-  padding-top:1rem;
-  padding-bottom: 1rem;
-  text-align: center;
-  text-decoration: none;
-  background-color: #F1DE86;
-}
-
 
 .button-details {
   text-decoration: none;
@@ -82,12 +80,13 @@ body {
 
 .button-home {
   height: 1.5rem;
-  width: 16rem;
-  padding-top:1rem;
+  width: 20rem;
+  padding-top:1.5rem;
   padding-bottom:1rem;
   margin-top:6rem;
   text-align: center;
   text-decoration: none;
   background-color: #F1DE86;
 }
+
 
