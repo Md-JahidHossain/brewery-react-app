@@ -7,7 +7,7 @@ function CardList() {
 
   if (breweries.length < 1) {
     return (
-      <h2 className = "section-title">
+      <h2 className = "no-brewery-title">
         No Brewery matched to your search criteria
       </h2>
     )
@@ -16,7 +16,7 @@ function CardList() {
 
       <div className='background'>
         {breweries.map((item) => {
-          return <Card key={item.id} {...item} />
+          return <Card key={item.name} {...item} />
         })}
       </div>
   )
