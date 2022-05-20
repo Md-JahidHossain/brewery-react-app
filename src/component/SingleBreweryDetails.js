@@ -4,7 +4,7 @@ import { useParams, Link } from 'react-router-dom'
 
 function SingleBreweryDetails() {
 
-  const { id } = useParams()
+  const { name } = useParams()
   const [brewery, setBrewery] = React.useState(null)
 
   React.useEffect(() => {
@@ -12,7 +12,7 @@ function SingleBreweryDetails() {
     async function getBrewery() {
       try {
         const response = await fetch(
-          `https://api.openbrewerydb.org/breweries?by_id=${id}`
+          `https://api.openbrewerydb.org/breweries?by_name=${name}`
         )
         const data = await response.json()
         if (data) {
@@ -33,7 +33,7 @@ function SingleBreweryDetails() {
             website_url,
             updated_at,
             created_at
-          } = data[3]
+          } = data[0]
 
           const newBrewery = {
             name,
@@ -63,10 +63,10 @@ function SingleBreweryDetails() {
 
     }
     getBrewery()
-  }, [id])
+  }, [name])
 
   if (!brewery) {
-    return <h2 className ='section-title'> L o a d i n g . . . . .  </h2>
+    return <h2 className ='no-brewery-title'> L o a d i n g . . . . . </h2>
   } else {
     const {
       name,
@@ -110,11 +110,12 @@ function SingleBreweryDetails() {
             <p> Updated at : {updated_at}  </p>
             <p> Created at  : {created_at}  </p>
           </div>
-          <div className = 'button-home'>
-            <Link to='/ ' > Go Home </Link>
-          </div>
+            <Link to='/ ' className = 'button-home'>
+              <div className = 'button-home'>
+                Go Home
+              </div>
+            </Link>
         </div>
-
       </div>
 
     )
@@ -122,3 +123,4 @@ function SingleBreweryDetails() {
 }
 
 export default SingleBreweryDetails;
+
